@@ -1,5 +1,7 @@
 package com.morgan.rest_demo.service;
 
+import java.util.Set;
+
 import com.morgan.rest_demo.model.CloudVendor;
 
 public interface CloudVendorService {
@@ -7,4 +9,5 @@ public interface CloudVendorService {
     public String updateCloudVendor(CloudVendor cloudVendor);
     public String deleteCloudVendor(String VendorId);
     public CloudVendor getCloudVendor(String VendorId);
+    public Set<Object> getAllCloudVendors();
 }

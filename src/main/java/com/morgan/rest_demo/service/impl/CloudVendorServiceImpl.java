@@ -1,5 +1,8 @@
 package com.morgan.rest_demo.service.impl;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.stereotype.Service;
 
 import com.morgan.rest_demo.exception.CloudVendorNotFound;
@@ -38,5 +41,10 @@ public class CloudVendorServiceImpl implements CloudVendorService{
             throw new CloudVendorNotFound("Requested CloudVendor does not exist!");
         }
         return Repo.findById(VendorId).get();
+    }
+
+    @Override
+    public Set<Object> getAllCloudVendors(){
+        return new HashSet<>(Repo.findAll());
     }
 }

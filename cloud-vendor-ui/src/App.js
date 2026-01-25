@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Header from "./components/header";
 import Home from "./pages/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from './pages/Register';
+import Delete from './pages/delete';
+import Details from './pages/Details';
+import Update from "./pages/Update";
 
 function App() {
   const [vendorId, setVendorId] = useState("");
@@ -26,6 +28,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
+          <Route path='/delete' element={<Delete/>}></Route>
+          <Route path='/details' element={<Details/>}></Route>
+          <Route path='/update' element={<Update/>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <div className="container">

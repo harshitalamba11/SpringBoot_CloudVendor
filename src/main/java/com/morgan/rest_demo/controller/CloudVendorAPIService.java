@@ -1,5 +1,12 @@
 package com.morgan.rest_demo.controller;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,12 +15,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 
+import com.morgan.rest_demo.Response;
 import com.morgan.rest_demo.model.CloudVendor;
 import com.morgan.rest_demo.service.CloudVendorService;
-import com.morgan.rest_demo.Response;
 
 
 @RestController
@@ -46,5 +51,10 @@ public class CloudVendorAPIService {
     @DeleteMapping("{vendorId}")
     public String deleteMethod(@PathVariable String vendorId){
         return Service.deleteCloudVendor(vendorId);
+    }
+
+    @GetMapping
+    public Set<Object> getAllDetails(){
+        return Service.getAllCloudVendors();
     }
 }
