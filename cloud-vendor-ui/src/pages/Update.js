@@ -15,14 +15,8 @@ const Update=()=>{
     function back_function(){
         navigate('/');
     }
-    function updation(id){
-        fetch(`http://localhost:8080/CloudVendor`,{method:"PUT"})
-        .then(response=>{
-            if(!response.ok){
-                throw new Error("Delete failed");
-            }
-            setdata(res=>res.filter(v=>v.vendorId!==id));
-        }).catch(err => console.error(err));
+    function updation(id) {
+        navigate(`/update/${id}`);
     }
     return(
         <>
@@ -41,7 +35,6 @@ const Update=()=>{
             </div>
             <div className="buttons_form_delete">
                     <button onClick={()=>back_function()} id="back_button_delete">Back</button>
-                    {/* <button onClick={submit} id="submit_register">Register</button> */}
             </div>
             </div>
         </>
