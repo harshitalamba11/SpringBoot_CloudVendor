@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
+import Carousel from '../components/carousel';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -8,6 +9,8 @@ const Home = () => {
   return (
     <>
       <Header />
+      <Carousel/>
+      <div></div>
       <div className='function-card'>
         <div onClick={() => navigate('/register')} id='register' style={{cursor: 'pointer'}}>
           <p>Register</p>

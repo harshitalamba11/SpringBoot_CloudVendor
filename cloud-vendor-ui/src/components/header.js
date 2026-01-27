@@ -1,9 +1,21 @@
-import React from 'react';
-import '../App.css';
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [isTransparent, setIsTransparent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsTransparent(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header class="header">Vendor Management System</header>
+    <header className={`header ${isTransparent ? "transparent" : ""}`}>
+      <h2 className="heading01">CloudXVendor</h2>
+    </header>
   );
 };
 

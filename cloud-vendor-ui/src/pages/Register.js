@@ -18,6 +18,7 @@ const Register=()=>{
     console.log(res.status);
     if (res.status === 200) {
       // Vendor already exists
+      console.log("exists");
       return false;
     }
 
@@ -44,6 +45,7 @@ const Register=()=>{
         const isValid = await verify();
         if (!isValid) {
             setmessage("Already Exists!!");
+            // console.log("exists");
             setfree();
             return;
         }
@@ -74,7 +76,6 @@ const Register=()=>{
         setVendorName("");
         setVendorPhoneNumber("");
         setVendorAddress("");
-        setmessage("");
     }
     useEffect(() => {
         if (message === "") return;
