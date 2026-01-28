@@ -454,3 +454,197 @@ html, body {
   background-color: #d1e7ff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+//register
+.register-container {
+  height: calc(100vh - 70px); /* header height */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background: #ffffff;
+  width: 420px;
+  margin:auto;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #4a90e2;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #357abd;
+}
+
+.btn.secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn.secondary:hover {
+  background: #dfe6e9;
+}
+
+.message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: green;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+//details
+/* Page alignment */
+.container_delete {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Search bar */
+.search_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.searchbar {
+  width: 420px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.searchbar:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* Vendor cards container */
+.box {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 4fr));
+  gap: 30px;
+}
+
+/* Individual card */
+.box_item {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+
+.box_item:hover {
+  transform: translateY(-4px);
+}
+
+/* Text inside cards */
+.labels p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+/* No data message */
+.message_display {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #999;
+}
+
+/* Back button alignment */
+.buttons_form_delete {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+#back_button_delete {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#back_button_delete:hover {
+  background: #357abd;
+}

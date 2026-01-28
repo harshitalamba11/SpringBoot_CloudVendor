@@ -85,33 +85,67 @@ const Register=()=>{
         return () => clearTimeout(timer);
     }, [message]);
 
-    return(
-        <>
-            <Header/>
-            <div className="register_form">
-                <div className="blocks_fill" id="register_form_id">
-                    <h3 className="label">VendorId</h3>
-                    <input className="input" value={vendorId} onChange={(e)=>setVendorId(e.target.value)} type="text" placeholder="VendorId"></input>
-                </div>
-                <div className="blocks_fill" id="register_form_name">
-                    <h3 className="label">VendorName</h3>
-                    <input className="input" value={vendorName} onChange={(e)=>setVendorName(e.target.value)} type="text" placeholder="VendorName"></input>
-                </div>
-                <div className="blocks_fill" id="register_form_id">
-                    <h3 className="label">VendorAddress</h3>
-                    <input className="input" value={vendorAddress} onChange={(e)=>setVendorAddress(e.target.value)} type="text" placeholder="Address"></input>
-                </div> 
-                <div className="blocks_fill" id="register_form_id">
-                    <h3 className="label">VendorPhoneNumber</h3>
-                    <input className="input" value={vendorPhoneNumber} onChange={(e)=>setVendorPhoneNumber(e.target.value)} type="text" placeholder="PhoneNumber"></input>
-                </div>
-                <div className="buttons_form">
-                    <button onClick={back_function} id="back_button">Back</button>
-                    <button onClick={submit} id="submit_register">Register</button>
-                </div>
-            </div>
-            <div className='message'>{message}</div>
-        </>
-    )
+    return (
+  <>
+    <Header />
+
+    <div className="register-container">
+      <div className="register-card">
+        <h2 className="form-title">Vendor Registration</h2>
+
+        <div className="form-group">
+          <label>Vendor ID</label>
+          <input
+            type="text"
+            value={vendorId}
+            onChange={(e) => setVendorId(e.target.value)}
+            placeholder="Enter Vendor ID"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Vendor Name</label>
+          <input
+            type="text"
+            value={vendorName}
+            onChange={(e) => setVendorName(e.target.value)}
+            placeholder="Enter Vendor Name"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Vendor Address</label>
+          <input
+            type="text"
+            value={vendorAddress}
+            onChange={(e) => setVendorAddress(e.target.value)}
+            placeholder="Enter Address"
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Phone Number</label>
+          <input
+            type="text"
+            value={vendorPhoneNumber}
+            onChange={(e) => setVendorPhoneNumber(e.target.value)}
+            placeholder="Enter Phone Number"
+          />
+        </div>
+
+        <div className="form-buttons">
+          <button className="btn secondary" onClick={back_function}>
+            Back
+          </button>
+          <button className="btn primary" onClick={submit}>
+            Register
+          </button>
+        </div>
+
+        {message && <div className="message">{message}</div>}
+      </div>
+    </div>
+  </>
+);
 }
 export default Register;
