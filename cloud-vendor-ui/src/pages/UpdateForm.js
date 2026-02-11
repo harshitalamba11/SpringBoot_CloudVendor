@@ -39,32 +39,59 @@ const UpdatedForm=()=>{
         }).catch(err=>console.log(err));
         navigate('/update');
     }
-    return(
-        <>
-        <Header/>
-        <div>
-            <div>
-                <label>VendorId</label>
-                <input type="text" value={id} readOnly></input>
-            </div>
-            <div>
-                <label>VendorName</label>
-                <input type="text" value={name} onChange={(e)=> setName(e.target.value)}></input>
-            </div>
-            <div>
-                <label>VendorAddress</label>
-                <input type="text" value={address} onChange={(e)=> setAddress(e.target.value)}></input>
-            </div>
-            <div>
-                <label>VendorPhoneNumber</label>
-                <input type="text" value={phone} onChange={(e)=> setPhone(e.target.value)}></input>
-            </div>
-            <div className="submit_update">
-                <button onClick={submit}>Update</button>
-            </div>
+    function back_function(){
+        navigate('/update');
+    }
+    return (
+  <>
+    <Header />
+    <div className="form-container1">
+      <div className="form-card1">
+        <h2 className="form-title1">Update Vendor</h2>
+
+        <div className="form-group1">
+          <label>Vendor ID</label>
+          <input type="text" value={id} readOnly />
         </div>
-        </>
-    )
+
+        <div className="form-group1">
+          <label>Vendor Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group1">
+          <label>Vendor Address</label>
+          <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group1">
+          <label>Vendor Phone Number</label>
+          <input
+            type="text"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+
+        <div className="submit_update1">
+          <button onClick={submit}>Update Vendor</button>
+        </div>
+      </div>
+      <div className="buttons_form_delete">
+                <button onClick={()=>back_function()} id="back_button_delete">Back</button>
+        </div>
+    </div>
+  </>
+);
+
 }
 
 export default UpdatedForm;
