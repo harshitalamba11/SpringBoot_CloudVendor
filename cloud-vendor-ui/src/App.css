@@ -3,7 +3,7 @@
   margin-top: 50px;
 }
 
-//Carousel
+/* //Carousel */
 .swiper {
   width: 100%;
   height: 300px;
@@ -27,7 +27,6 @@
   object-fit: cover;
 }
 
-//
 
 input {
   padding: 8px;
