@@ -9,19 +9,19 @@ import Update from "./pages/Update";
 import UpdateForm from "./pages/UpdateForm";
 
 function App() {
-  const [vendorId, setVendorId] = useState("");
-  const [vendor, setVendor] = useState(null);
-  const getVendor = async () => {
-    try {
-      const response = await fetch(
-        `http://localhost:8080/CloudVendor/${vendorId}`
-      );
-      const data = await response.json();
-      setVendor(data.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const [vendorId, setVendorId] = useState("");
+  // const [vendor, setVendor] = useState(null);
+  // const getVendor = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       `http://localhost:8080/CloudVendor/${vendorId}`
+  //     );
+  //     const data = await response.json();
+  //     setVendor(data.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <>
