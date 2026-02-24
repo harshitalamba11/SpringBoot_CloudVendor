@@ -1,7 +1,6 @@
 import React ,{useState , useEffect} from 'react';
 import Header from '../components/header';
 import { useNavigate,useParams } from 'react-router-dom';
-import Update from './Update';
 
 const UpdatedForm=()=>{
     const [name, setName] = useState("");
@@ -9,7 +8,6 @@ const UpdatedForm=()=>{
     const [phone, setPhone] = useState("");
 
     const {id}=useParams();
-    const [data,setdata]=useState([]);
     const navigate=useNavigate();
     useEffect(()=>{
         fetch(`http://localhost:8080/CloudVendor/${id}`)
