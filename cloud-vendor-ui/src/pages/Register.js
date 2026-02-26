@@ -14,7 +14,7 @@ const Register=()=>{
     }
     async function verify() {
   try {
-    const res = await fetch(`https://cloud_vendor_info.onrender.com/CloudVendor/${vendorId}`);
+    const res = await fetch(`https://springboot-cloudvendor-1.onrender.com/CloudVendor/${vendorId}`);
     console.log(res.status);
     if (res.status === 200) {
       // Vendor already exists
@@ -57,7 +57,7 @@ const Register=()=>{
             vendorAddress,
             vendorPhoneNumber
         };
-        fetch("https://cloud_vendor_info.onrender.com/CloudVendor",{
+        fetch("https://springboot-cloudvendor-1.onrender.com/CloudVendor",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
