@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Delete=()=>{
     const navigate=useNavigate();
     const [data,setdata]=useState([]);
-    useEffect(()=>{fetch("http://localhost:8080/CloudVendor")
+    useEffect(()=>{fetch("https://cloud_vendor_info.onrender.com/CloudVendor")
     .then(response=>response.json())
     .then(result=>{
         setdata(result);
@@ -16,7 +16,7 @@ const Delete=()=>{
         navigate('/');
     }
     function deletion(id){
-        fetch(`http://localhost:8080/CloudVendor/${id}`,{method:"DELETE"})
+        fetch(`https://cloud_vendor_info.onrender.com/CloudVendor/${id}`,{method:"DELETE"})
         .then(response=>{
             if(!response.ok){
                 throw new Error("Delete failed");

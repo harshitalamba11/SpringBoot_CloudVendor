@@ -9,7 +9,7 @@ const Details=()=>{
     const [input, setInput] = useState("");
 
     useEffect(()=>{
-        fetch(`http://localhost:8080/CloudVendor`,{method:"GET"})
+        fetch(`https://cloud_vendor_info.onrender.com/CloudVendor`,{method:"GET"})
         .then(res=>res.json()).then(r=>{setdata(r);setfilterdata(r)}).catch(err=>{console.log(err)});
     },[]);
 

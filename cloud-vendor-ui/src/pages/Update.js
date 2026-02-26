@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Update=()=>{
     const navigate=useNavigate();
     const [data,setdata]=useState([]);
-    useEffect(()=>{fetch("http://localhost:8080/CloudVendor")
+    useEffect(()=>{fetch("https://cloud_vendor_info.onrender.com/CloudVendor")
     .then(response=>response.json())
     .then(result=>{
         setdata(result);

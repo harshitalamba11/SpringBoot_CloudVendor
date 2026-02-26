@@ -10,7 +10,7 @@ const UpdatedForm=()=>{
     const {id}=useParams();
     const navigate=useNavigate();
     useEffect(()=>{
-        fetch(`http://localhost:8080/CloudVendor/${id}`)
+        fetch(`https://cloud_vendor_info.onrender.com/CloudVendor/${id}`)
         .then(res=>res.json())
         .then(r=>{ setName(r.data.vendorName);
                 setAddress(r.data.vendorAddress);
@@ -23,7 +23,7 @@ const UpdatedForm=()=>{
             vendorAddress: address,
             vendorPhoneNumber: phone
         };
-        fetch('http://localhost:8080/CloudVendor',
+        fetch('https://cloud_vendor_info.onrender.com/CloudVendor',
             {method:"PUT",
             headers:{
                 "Content-Type":"application/json"
