@@ -1,0 +1,49 @@
+Your Spring Boot backend and PostgreSQL DB can be on different Render
+ accounts
+ frontend on vercel
+
+
+
+
+ in kubernetes 
+ for backennd http://127.0.0.1:56409/CloudVendor
+add /CloudVendor also after
+minikube service backend-service
+
+
+commands:
+1. creating docker image  
+---add dockerfile and content in it.
+---build jar: 
+    mvn clean package
+---build image
+    docker build -t cloudvendor-backend .
+---run image it will come to docker desktop
+    docker run -p 8080:8080 cloudvendor-backend
+
+2. same for frontend
+
+    run it with docker run -p 3000:80 cloudvendor-frontend
+
+---can check docker images
+
+3. now push to docker
+---docker login
+---docker tag cloudvendor-backend <dockerusername>/cloudvendor-backend
+---docker push <dockerusername>/cloudvendor-backend
+
+---docker tag cloudvendor-frontend <dockerusername>/cloudvendor-frontend
+---docker push <dockerusername>/cloudvendor-frontend
+
+
+if anyone needs to use write docker pull name
+then run
+
+4. use of minikube(local kubernetes cluster on your laptop)
+    ---minikube start
+    ---add files as in k8s
+    then minikube apply -f k8s/frontend-deployment.yaml
+    same for backend
+    ---then start services as
+    minikube service frontend-service
+    same for backend

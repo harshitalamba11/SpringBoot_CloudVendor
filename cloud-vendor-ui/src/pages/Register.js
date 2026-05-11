@@ -15,7 +15,7 @@ const Register=()=>{
     async function verify() {
   try {
     const res = await fetch(`https://springboot-cloudvendor-1.onrender.com/CloudVendor/${vendorId}`);
-    console.log(res.status);
+    // console.log(res.status);
     if (res.status === 200) {
       // Vendor already exists
       console.log("exists");
