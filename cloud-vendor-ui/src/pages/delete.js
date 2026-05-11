@@ -10,7 +10,7 @@ const Delete=()=>{
     .then(result=>{
         setdata(result);
     }).catch(err=>console.log(err));
-},[]);
+},[])
 
     function back_function(){
         navigate('/');

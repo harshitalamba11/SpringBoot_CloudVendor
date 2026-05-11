@@ -1,12 +1,10 @@
 package com.morgan.rest_demo.controller;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +18,7 @@ import com.morgan.rest_demo.Response;
 import com.morgan.rest_demo.model.CloudVendor;
 import com.morgan.rest_demo.service.CloudVendorService;
 
-
+@CrossOrigin(origins = "https://spring-boot-cloud-vendor.vercel.app")
 @RestController
 @RequestMapping("/CloudVendor")
 
